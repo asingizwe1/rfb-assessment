@@ -1,3 +1,4 @@
+//everything goes through here rpc
 pub struct RpcClient {
     url: String,
     user: String,
