@@ -6,3 +6,14 @@ pub struct BlockchainInfo {
     pub difficulty: f64,
     pub verificationprogress: f64,
 }
+/*doesnt perform http itself
+Ask rpc client
+
+↓
+
+Receive BlockchainInfo
+
+↓
+
+Print fields
+*/

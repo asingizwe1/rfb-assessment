@@ -1,3 +1,5 @@
+Config::load() //reading env vars
+
 pub struct Config {
     pub rpc_url: String,
     pub rpc_user: String,

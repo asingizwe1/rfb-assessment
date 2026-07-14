@@ -1,4 +1,17 @@
-//existing commands
+use clap::{Parser, Subcommand};
+/*
+-cli description and doesnt connect to Btc and only parses CLI- args
+-existing commands
+btc-rpc-cli
+── blockchain-info
+── wallet-info
+── balance
+── new-address
+── rpc */
+#[derive(Parser)]
+#[command(name = "btc-rpc-cli")]
+#[command(version)]
+#[command(about = "Bitcoin Core RPC CLI")]
 #[derive(Parser)]
 pub struct Cli {
     #[command(subcommand)]
