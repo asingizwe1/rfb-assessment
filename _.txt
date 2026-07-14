@@ -1,3 +1,5 @@
+Why reqwest instead of bitcoincore-rpc? Your capstone taught you that bitcoincore-rpc breaks on newer Core versions. reqwest lets you make raw HTTP JSON-RPC calls yourself — more control, no version mismatch issues
+
 use clap::Parser;
 
 #[derive(Parser)]
