@@ -1,4 +1,16 @@
 //everything goes through here rpc
+/*
+RpcClient
+
+↓
+
+new()
+
+↓
+
+call()
+*/
+let rpc = RpcClient::new(config);
 pub struct RpcClient {
     url: String,
     user: String,
@@ -6,19 +18,9 @@ pub struct RpcClient {
     http: reqwest::blocking::Client,
 }
 
-//generic method to call
-pub fn call<T: serde::de::DeserializeOwned>(
-    &self,
-    method: &str,
-    params: &[serde_json::Value],
-) -> anyhow::Result<T>
-/*Http request body for Bitcoin core
-{
-    "jsonrpc": "1.0",
-    "id": "btc-cli",
-    "method": "getblockchaininfo",
-    "params": []
+impl RpcClient {
+ pub fn new(...)
+
+    pub fn call(...)
+
 }
-*/
-
-
