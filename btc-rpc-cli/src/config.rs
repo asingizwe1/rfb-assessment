@@ -4,3 +4,4 @@ pub struct Config {
     pub rpc_password: String,
     pub wallet: Option<String>,
 }
+//setting defaults to be set back to if not found results
