@@ -54,37 +54,29 @@ anyhow
 
 Start a Bitcoin Core node using Polar.
 
-Configure RPC credentials
 
-## Windows PowerShell
-$env:BITCOIN_RPC_URL="http://127.0.0.1:18443"
-$env:BITCOIN_RPC_USER="polaruser"
-$env:BITCOIN_RPC_PASSWORD="polarpass"
-
-
-Blockchain information
+### Blockchain information
 
 cargo run -- blockchain-info
 
-Wallet information
+### Wallet information
 
 cargo run -- wallet-info
 
-Balance
+### Balance
 
 cargo run -- balance
 
-Generate address
+### Generate address
 
 cargo run -- new-address
 
-Generic RPC
+### Generic RPC
 
 cargo run -- rpc getblockcount
 
-## Output
-
--blockchain-info
+## OUTPUTS
+## -cargo run -- blockchain-info
 {
   "chain": "regtest",
   "blocks": 1,
@@ -93,9 +85,23 @@ cargo run -- rpc getblockcount
   "verificationprogress": 1.0
 }
 
--cargo run -- new-address
+## -cargo run -- new-address
 New Address: bcrt1qfa6rjmhgdnfxukv255v0lk6ql5c0uz0gfqf5dc
 
--cargo run -- rpc getblockcount
+## -cargo run -- rpc getblockcount
      Running `target\debug\btc-rpc-cli.exe rpc getblockcount`
 1
+
+## -cargo run -- balance
+Balance: 0 BTC
+
+## -cargo run -- wallet-info
+Wallet: 
+Transactions: 2
+PS F:\rust2\rfb-assessm
+
+## Windows PowerShell
+$env:BITCOIN_RPC_URL="http://127.0.0.1:18443"
+$env:BITCOIN_RPC_USER="polaruser"
+$env:BITCOIN_RPC_PASSWORD="polarpass"
+
