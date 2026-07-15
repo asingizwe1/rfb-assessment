@@ -1,8 +1,8 @@
 use crate::rpc::RpcClient;
 use anyhow::Result;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct BlockchainInfo {
     pub chain: String,
     pub blocks: u64,
@@ -14,11 +14,7 @@ pub struct BlockchainInfo {
 pub fn execute(rpc: &RpcClient) -> Result<()> {
     let info: BlockchainInfo = rpc.call("getblockchaininfo", &[])?;
 
-    println!("Chain: {}", info.chain);
-    println!("Blocks: {}", info.blocks);
-    println!("Headers: {}", info.headers);
-    println!("Difficulty: {}", info.difficulty);
-    println!("Verification Progress: {}", info.verificationprogress);
+    println!("{}", serde_json::to_string_pretty(&info)?);
 
     Ok(())
 }
