@@ -12,7 +12,7 @@ btc-rpc-cli
 #[command(name = "btc-rpc-cli")]
 #[command(version)]
 #[command(about = "Bitcoin Core RPC CLI")]
-#[derive(Parser)]
+
 pub struct Cli {
     #[command(subcommand)]
     pub command: Command,
